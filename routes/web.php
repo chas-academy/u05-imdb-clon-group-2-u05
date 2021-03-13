@@ -18,6 +18,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/title/{id}', [MovieController::class, 'show'])->name('showMovie');
+Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('showByGenre');
 
 /*Route::get('/dashboard', function () {
     return view('dashboard');

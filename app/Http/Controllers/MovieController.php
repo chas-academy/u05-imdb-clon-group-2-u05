@@ -12,9 +12,10 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($genre)
     {
-        //
+        $movies = Movie::where('genre', $genre)->orderBy('genre')->firstOrFail();
+        return view('show-genre', ['movies' => $movies]);
     }
 
     /**

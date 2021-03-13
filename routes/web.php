@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\GenreController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +18,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/title/{id}', [MovieController::class, 'show'])->name('showMovie');
-Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('showByGenre');
+Route::get('/title/{id}', [MovieController::class, 'show'])->name('movie');
+Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
+Route::get('/genres/', [GenreController::class, 'index'])->name('genres');
 
 /*Route::get('/dashboard', function () {
     return view('dashboard');

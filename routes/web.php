@@ -20,7 +20,8 @@ Route::get('/', function () {
 
 Route::get('/title/{id}', [MovieController::class, 'show'])->name('movie');
 Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
-Route::get('/genres/', [GenreController::class, 'index'])->name('genres');
+Route::get('/find/{title}', [MovieController::class, 'index'])->name('find');
+Route::get('/categories/', [GenreController::class, 'index'])->name('categories');
 
 /*Route::get('/dashboard', function () {
     return view('dashboard');

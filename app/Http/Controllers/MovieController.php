@@ -12,10 +12,28 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($genre)
+    public function index($title = null, $genre = null)
     {
-        $movies = Movie::where('genre', $genre)->orderBy('genre')->firstOrFail();
-        return view('show-genre', ['movies' => $movies]);
+        $column = '';
+        $value = '';
+        $pageTitle = '';
+        $query = null;
+
+        if (!empty($title)) {
+            $column = 'title';
+            $value = $title;
+            $pageTitle = 'Search results';
+            $query = Movie::where($column, 'like', $value.'%')->orderBy($column)->limit(50)->firstOrFail();
+        }
+        else if (!empty($genre)) {
+            $column = 'genre';
+            $value = $genre;
+            $pageTitle = $genre;
+            $query = Movie::where($column, $value)->orderBy($column)->limit(50)->firstOrFail();
+        }
+
+        $movies = $query;
+        return view('result', ['title' => $pageTitle, 'movies' => $movies]);
     }
 
     /**

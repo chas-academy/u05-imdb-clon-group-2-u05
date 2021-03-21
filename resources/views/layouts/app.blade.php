@@ -13,8 +13,20 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+        <!-- Splide Slider -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
         <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script>
+            document.addEventListener( 'DOMContentLoaded', function () {
+		        new Splide( '.splide', {
+                    type: 'loop',
+                    perPage: 3
+                } ).mount();
+	        });
+        </script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

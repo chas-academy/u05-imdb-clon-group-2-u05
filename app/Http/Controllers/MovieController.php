@@ -20,16 +20,16 @@ class MovieController extends Controller
         $query = null;
 
         if (!empty($title)) {
-            $column = 'title';
+            $column = 'name';
             $value = $title;
             $pageTitle = 'Search results';
-            $query = Movie::where($column, 'like', $value.'%')->orderBy($column)->limit(50)->firstOrFail();
+            $query = Movie::where($column, 'like', $value.'%')->orderBy($column)->limit(50)->get();
         }
         else if (!empty($genre)) {
             $column = 'genre';
             $value = $genre;
             $pageTitle = $genre;
-            $query = Movie::where($column, $value)->orderBy($column)->limit(50)->firstOrFail();
+            $query = Movie::where($column, $value)->orderBy($column)->limit(50)->get();
         }
 
         $movies = $query;

@@ -7,12 +7,12 @@
         <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center">New movies and TV-shows</h2>
             <div class="grid grid-cols-1 gap-8">
                 <div class="mt-8">
-                <a href="#">
+                <a href="movie">
                     <img src="{{url('/images/BabyDriver.jpg')}}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 
                 <div class="mt-2 text-center">
-                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Baby Driver</a>
+                    <a href="movie" class="text-lg mt-2 hover:text-gray:300">Baby Driver</a>
                     <div class="text-center text-gray-400 text-sm mt-1">
                         <span>"star"</span>
                         <span class="ml-1">7,6</span>

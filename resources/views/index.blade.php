@@ -3,12 +3,15 @@
 @section('content')
 <div class="container mx-auto px-4 pt-16">
 
+    <div class="new-MoviesTVshows">
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center">Featured</h2>
+    
     <div class="carousel relative shadow-2xl">
 	<div class="carousel-inner relative overflow-hidden w-full">
 	  <!--Slide 1-->
 		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
 		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full text-white text-3xl text-center">Baby Driver
+			<div class="block h-full w-full text-white text-lg text-center font-semibold">Baby Driver
                 <a href="movie">
                     <img src="{{url('/images/BabyDriver.jpg')}}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
@@ -20,7 +23,7 @@
 		<!--Slide 2-->
 		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
 		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full text-white text-3xl text-center">Zack Snyder's Justice League
+			<div class="block h-full w-full text-white text-lg text-center font-semibold">Zack Snyder's Justice League
                 <a href="movie">
                     <img src="{{url('/images/BabyDriver.jpg')}}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
@@ -32,7 +35,7 @@
 		<!--Slide 3-->
 		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
 		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full text-white text-3xl text-center">Lupin
+			<div class="block h-full w-full text-white text-lg text-center font-semibold">Lupin
                 <a href="movie">
                     <img src="{{url('/images/BabyDriver.jpg')}}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
@@ -56,9 +59,10 @@
 		
 	</div>
 </div>
+</div>
 
     <div class="popular-MoviesTvshows">
-        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center mt-6">Popular movies and TV-shows</h2>
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center mt-8">Popular</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div class="mt-8">
                 <a href="movie">
@@ -168,7 +172,7 @@
 </div>
 
     <div class="rating-MoviesTvshows">
-        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center mt-6">Highest rated movies and TV-shows</h2>
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center mt-6">Highest rated</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div class="mt-8">
                 <a href="movie">

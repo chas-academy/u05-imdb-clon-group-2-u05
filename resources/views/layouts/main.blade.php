@@ -12,7 +12,7 @@
     <nav class="border-b border-gray-800">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
-                <li class="text-yellow-500">
+                <li class="text-lg text-yellow-500 hover:text-yellow-400">
                     <a href="http://imdbclone.local"> IMDB-Clone</a>
                 </li>
                 <li class="md:ml-16 mt-2 md:mt-0">
@@ -24,18 +24,25 @@
                 <li class="md:ml-6 mt-2 md:mt-0">
                     <a href="actors" class="text-sm hover:text-gray-300">Actors</a>
                 </li>
-            </ul>
-            <div class="flex flex-col md:flex-row items-center">
+                <li class="md:ml-6 mt-2 md:mt-0">
+                    <div class="flex flex-col md:flex-row items-center">
                 <div class="relative mt-2 md:mt-0">
-                    <input type="text" class="bg-gray-800 text-sm w-64 sm:w-40 md:w-50 lg:w-64 px-4 pl-2 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
-                    
+                    <input type="text" class="bg-gray-800 text-sm w-40 sm:w-40 md:w-50 lg:w-64 px-4 pl-2 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
                 </div>
             </div>
+                </li>
+                <li class="md:ml-6 mt-4 md:mt-0">
+                    <a href="watchlist" class="text-sm hover:text-gray-300 bg-black">Watchlist</a>
+                </li>
+            </ul>
             
-            <div class="watchlist top-right links mt-2 md:mt-0">
-                <a href="watchlist" class="text-sm text-gray-500 hover:text-gray-300">Watchlist</a>
-            </div>
 
+            <div class="flex items-center">
+            <div class="watchlist top-right links mt-2 md:mt-0">
+                
+            </div>
+            </div>
+            
             <div class="flex items-center">
                 <div class="relative">
                     @if (Route::has('login'))

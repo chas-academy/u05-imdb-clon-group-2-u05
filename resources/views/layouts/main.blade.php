@@ -48,7 +48,9 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li class="text-lg text-yellow-500 hover:text-yellow-400">
-                    <a href="http://imdbclone.local"> IMDB-Clone</a>
+                    <a href="http://imdbclone.local">
+                    <img src="{{url('/images/IMDB-logo.svg')}}" alt="Image" class="w-14 h-14 hover:opacity-75 transition ease-in-out duration 150" />
+                </a>
                 </li>
                 <li class="md:ml-16 mt-2 md:mt-0">
                     <a href="movies" class="text-sm hover:text-gray-300">Movies</a>
@@ -67,7 +69,9 @@
             </div>
                 </li>
                 <li class="md:ml-6 mt-4 md:mt-0">
-                    <a href="watchlist" class="text-sm hover:text-gray-300 bg-black">Watchlist</a>
+                    <a href="watchlist">
+                        <img src="{{url('/images/Watchlist.svg')}}" title="Watchlist" alt="Image" class="w-11 h-11 hover:opacity-75 transition ease-in-out duration 150" />
+                    </a>
                 </li>
             </ul>
             
@@ -81,7 +85,7 @@
             <div class="flex items-center">
                 <div class="relative">
                     @if (Route::has('login'))
-                <div class="top-right links mt-2 md:mt-0">
+                <div class="top-right links">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-500 hover:text-gray-300">Dashboard</a>
                     @else

@@ -4,7 +4,7 @@
 <div class="container mx-auto px-4 pt-16">
 
     <div class="new-MoviesTVshows">
-        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center">Featured</h2>
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold">Featured</h2>
     
     <div class="carousel relative shadow-2xl">
 	<div class="carousel-inner relative overflow-hidden w-full">
@@ -23,7 +23,7 @@
 		<!--Slide 2-->
 		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
 		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full text-white text-lg text-center font-semibold">Zack Snyder's Justice League
+			<div class="block h-full w-full text-white text-lg font-semibold">Zack Snyder's Justice League
                 <a href="movie">
                     <img src="{{url('/images/BabyDriver.jpg')}}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
@@ -35,7 +35,7 @@
 		<!--Slide 3-->
 		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
 		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full text-white text-lg text-center font-semibold">Lupin
+			<div class="block h-full w-full text-white text-lg font-semibold">Lupin
                 <a href="movie">
                     <img src="{{url('/images/BabyDriver.jpg')}}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
@@ -62,7 +62,7 @@
 </div>
 
     <div class="popular-MoviesTvshows">
-        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center mt-8">Popular</h2>
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold mt-8">Popular</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div class="mt-8">
                 <a href="movie">
@@ -172,7 +172,7 @@
 </div>
 
     <div class="rating-MoviesTvshows">
-        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold text-center mt-6">Highest rated</h2>
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold mt-6">Highest rated</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div class="mt-8">
                 <a href="movie">
@@ -287,14 +287,14 @@
         <div class="sm:flex sm:mt-8">
             <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                 <div class="flex flex-col">
-                    <span class="font-bold text-gray-500 uppercase mb-2">Features</span>
-                    <span class="my-2"><a href="#" class="text-white-700  text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-white-700  text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-white-700  text-md hover:text-blue-500">link 1</a></span>
+                    <span class="font-bold text-gray-500 uppercase mb-2 ">Features</span>
+                    <span class="my-2"><a href="#" class="text-white-700  text-md hover:text-blue-500">Design</a></span>
+                    <span class="my-2"><a href="#" class="text-white-700  text-md hover:text-blue-500">lorem</a></span>
+                    <span class="my-2"><a href="#" class="text-white-700  text-md hover:text-blue-500">lorem</a></span>
                 </div>
                 <div class="flex flex-col">
                     <span class="font-bold text-gray-500 uppercase mt-4 md:mt-0 mb-2">About</span>
-                    <span class="my-2"><p class="text-white text-md">"project description"</p></span>
+                    <span class="my-2"><p class="text-white text-md">This is a website designed to replicate popular <br> movie-websites like IMDB and Rotten Tomatoes. <br><br> It was built using Laravel framework, <br>using Tailwind CSS and MySQL-database.</p></span>
                 </div>
                 <div class="flex flex-col">
                     <span class="font-bold text-gray-500 uppercase mt-4 md:mt-0 mb-2">Resources</span>

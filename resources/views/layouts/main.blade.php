@@ -12,16 +12,17 @@
     <nav class="border-b border-gray-800">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
-                <li class="text-yellow-500">IMDB-Clone
+                <li class="text-yellow-500">
+                    <a href="http://imdbclone.local"> IMDB-Clone</a>
                 </li>
                 <li class="md:ml-16 mt-2 md:mt-0">
-                    <a href="#" class="text-sm hover:text-gray-300">Movies</a>
+                    <a href="movies" class="text-sm hover:text-gray-300">Movies</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
-                    <a href="#" class="text-sm hover:text-gray-300">TV shows</a>
+                    <a href="tv-shows" class="text-sm hover:text-gray-300">TV shows</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
-                    <a href="#" class="text-sm hover:text-gray-300">Actors</a>
+                    <a href="actors" class="text-sm hover:text-gray-300">Actors</a>
                 </li>
             </ul>
             <div class="flex flex-col md:flex-row items-center">
@@ -32,7 +33,7 @@
             </div>
             
             <div class="watchlist top-right links mt-2 md:mt-0">
-                <a href="#" class="text-sm text-gray-500 hover:text-gray-300">Watchlist</a>
+                <a href="watchlist" class="text-sm text-gray-500 hover:text-gray-300">Watchlist</a>
             </div>
 
             <div class="flex items-center">

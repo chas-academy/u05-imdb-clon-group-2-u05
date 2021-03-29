@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/title/{id}', function () {
+    return view('title');
+})->name('title');
+
 /*Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard'); */

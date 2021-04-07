@@ -23,8 +23,4 @@ Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
 Route::get('/find/{title}', [MovieController::class, 'index'])->name('find');
 Route::get('/categories/', [GenreController::class, 'index'])->name('categories');
 
-/*Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard'); */
-
 require __DIR__.'/auth.php';

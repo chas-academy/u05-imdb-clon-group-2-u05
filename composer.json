@@ -9,6 +9,9 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "backpack/crud": "4.1.*",
+        "backpack/permissionmanager": "^6.0",
+        "backpack/settings": "^3.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -16,6 +19,7 @@
         "laravel/tinker": "^2.6"
     },
     "require-dev": {
+        "backpack/generators": "^3.1",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.1",

@@ -1,9 +1,9 @@
 <x-app-layout>
 <div class="movie-info border-b border-gray-800">
 <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="w-64 md:w-96 hover:opacity-75 transition ease-in-out duration 150" style="width: 24rem">
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="w-64 md:w-96 hover:opacity-75 transition ease-in-out duration 150" style="width: 24rem">
                 <div class="md:ml-24">
-                    <h2 class="text-4xl font-semibold">{{ $movie.name }}</h2>
+                    <h2 class="text-4xl font-semibold">{{ $movie->name }}</h2>
                     <div class="flex flex-wrap items-center text-gray-400 text-sm mt-1">
                         <span>
                             <a href="#"></a>
@@ -17,7 +17,7 @@
                     </div>
 
                     <p class="text-gray-300 mt-8">
-                        {{ $movie.description }}
+                        {{ $movie->description }}
                     </p>
 
                     <div class="mt-12">
@@ -44,7 +44,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 <div class="mt-2">
                     <a href="#" class="text-lg mt-2 hover:text-gray:300">Baby</a>
@@ -56,7 +56,7 @@
                         
             <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 <div class="mt-2">
                     <a href="#" class="text-lg mt-2 hover:text-gray:300">Griff</a>
@@ -68,7 +68,7 @@
                     
             <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 <div class="mt-2">
                     <a href="#" class="text-lg mt-2 hover:text-gray:300">Buddy</a>
@@ -80,7 +80,7 @@
 
                         <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 <div class="mt-2">
                     <a href="#" class="text-lg mt-2 hover:text-gray:300">Darling</a>
@@ -92,7 +92,7 @@
 
                         <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 <div class="mt-2">
                     <a href="#" class="text-lg mt-2 hover:text-gray:300">Barista</a>
@@ -111,37 +111,37 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
             <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
             </div>
                         
             <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
             </div>    
                     
             <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
             </div>    
 
                         <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
             </div>   
 
                         <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
             </div>   
 
                         <div class="mt-8">
                 <a href="#">
-                    <img src="{{ $movie.thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
             </div>   
             </div> 

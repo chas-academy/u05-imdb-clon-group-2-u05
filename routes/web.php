@@ -18,7 +18,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/title/{id}', function () {
-    return view('title');
+    return view('show-movie');
 })->name('title');
 
 /*Route::get('/dashboard', function () {

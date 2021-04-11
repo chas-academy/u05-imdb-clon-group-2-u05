@@ -18,7 +18,10 @@
                 <li class="md:ml-6 mt-2 md:mt-0">
                     <div class="flex flex-col md:flex-row items-center">
                 <div class="relative mt-2 md:mt-0">
-                    <input type="text" class="bg-gray-800 text-sm w-40 sm:w-40 md:w-50 lg:w-64 px-4 pl-2 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
+                <form method="POST" action="{{ route('find') }}">
+                    @csrf
+                    <input type="text" class="bg-gray-800 text-sm w-40 sm:w-40 md:w-50 lg:w-64 px-4 pl-2 py-1 focus:outline-none focus:shadow-outline" placeholder="Search" name="title">
+                </form>
                 </div>
             </div>
                 </li>

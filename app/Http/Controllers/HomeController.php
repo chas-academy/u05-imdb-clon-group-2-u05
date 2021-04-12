@@ -4,12 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Movie;
 
 class HomeController extends Controller
 {
     public function index() {
         $featuredMovies = DB::table('featured_movies')
-        ->join('movies', 'featured_movies.movie_id', '=', 'movies.id')->get();
-        return view('home', ['featuredMovies' => $featuredMovies]);
+        ->join('movies', 'featured_movies.movie_id', '=', 'movies.id')->limit(5)->get();
+
+        $popularMovies = DB::table('popular_movies')
+        ->join('movies', 'popular_movies.movie_id', '=', 'movies.id')->limit(5)->get();
+
+        $topMovies = Movie::orderBy('rating', 'desc')->limit(5)->get();
+
+        return view('home', ['featuredMovies' => $featuredMovies, 'popularMovies' => $popularMovies, 'topMovies' => $topMovies]);
     }
 }

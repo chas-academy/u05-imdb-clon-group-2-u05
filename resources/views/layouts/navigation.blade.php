@@ -2,8 +2,8 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li class="text-lg text-yellow-500 hover:text-yellow-400">
-                    <a href="http://imdbclone.local">
-                    <img src="{{url('/images/IMDB-logo.svg')}}" alt="Image" class="w-14 h-14 hover:opacity-75 transition ease-in-out duration 150" />
+                    <a href="{{ route('home') }}">
+                    <img src="{{url('/images/IMDB-logo.svg')}}" alt="IMDB logo" class="w-14 h-14 hover:opacity-75 transition ease-in-out duration 150" />
                 </a>
                 </li>
                 <li class="md:ml-16 mt-2 md:mt-0">
@@ -20,7 +20,7 @@
                 <div class="relative mt-2 md:mt-0">
                 <form method="POST" action="{{ route('find') }}">
                     @csrf
-                    <input type="text" class="bg-gray-800 text-sm w-40 sm:w-40 md:w-50 lg:w-64 px-4 pl-2 py-1 focus:outline-none focus:shadow-outline" placeholder="Search" name="title">
+                    <input type="text" class="bg-gray-800 text-sm w-40 sm:w-40 md:w-50 lg:w-64 px-4 pl-2 py-1 focus:outline-none focus:shadow-outline" placeholder="Search" name="title" required>
                 </form>
                 </div>
             </div>

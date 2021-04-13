@@ -1,7 +1,7 @@
-<div class="popular-MoviesTvshows">
-        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold mt-8">Popular</h2>
+<div class="rating-MoviesTvshows">
+        <h2 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold mt-6">Highest rated</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-		@foreach ($popularMovies as $movie)
+		@foreach ($topMovies as $movie)
             <div class="mt-8">
                 <a href="{{ route('movie', $movie->id) }}">
                     <img src="{{ $movie->thumbnail }}" alt="{{ $movie->name }}" class="hover:opacity-75 transition ease-in-out duration 150" />

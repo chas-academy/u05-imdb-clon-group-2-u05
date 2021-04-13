@@ -10,25 +10,26 @@ class MovieController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index($title = null, $genre = null)
+    public function index(Request $request)
     {
         $column = '';
         $value = '';
         $pageTitle = '';
         $query = null;
 
-        if (!empty($title)) {
+        if ($request->title) {
             $column = 'name';
-            $value = $title;
-            $pageTitle = 'Search results';
+            $value = $request->title;
+            $pageTitle = 'Search results:';
             $query = Movie::where($column, 'like', $value.'%')->orderBy($column)->limit(50)->get();
         }
-        else if (!empty($genre)) {
+        else if ($request->genre) {
             $column = 'genre';
-            $value = $genre;
-            $pageTitle = $genre;
+            $value = $request->genre;
+            $pageTitle = ucfirst($request->genre);
             $query = Movie::where($column, $value)->orderBy($column)->limit(50)->get();
         }
 

@@ -28,7 +28,7 @@ class MovieCrudController extends CrudController
     public function setup()
     {
         CRUD::setModel(\App\Models\Movie::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/movie');
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/movies');
         CRUD::setEntityNameStrings('movie', 'movies');
     }
 

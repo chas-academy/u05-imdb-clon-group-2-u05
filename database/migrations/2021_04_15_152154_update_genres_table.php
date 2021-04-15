@@ -14,7 +14,7 @@ class UpdateGenresTable extends Migration
     public function up()
     {
         Schema::table('genres', function (Blueprint $table) {
-            $table->string('thumbnail');
+            $table->string('thumbnail')->nullable();
         });
     }
 

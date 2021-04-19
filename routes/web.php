@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,5 +21,6 @@ Route::get('/title/{id}', [MovieController::class, 'show'])->name('movie');
 Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
 Route::post('/find/', [MovieController::class, 'index'])->name('find');
 Route::get('/categories/', [GenreController::class, 'index'])->name('categories');
+Route::resource('products', ProductController::class);
 
 require __DIR__.'/auth.php';

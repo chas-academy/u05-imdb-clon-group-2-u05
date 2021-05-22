@@ -18,6 +18,8 @@
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script>
             document.addEventListener( 'DOMContentLoaded', function () {
@@ -49,5 +51,8 @@
             @include('layouts.footer')
             </footer>
         </div>
+        <script>
+        CKEDITOR.replace( 'content-review' );
+        </script>
     </body>
 </html>

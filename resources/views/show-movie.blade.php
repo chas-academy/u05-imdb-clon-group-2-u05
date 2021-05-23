@@ -33,6 +33,10 @@
                             </div>
                         </div>
                     </div>
+                    <form method="POST" action="{{ route('watchlist-add', $movie->id) }}">
+                        @csrf
+                        <button role="save" type="submit" class="p-3 mt-5 bg-blue-800 text-white hover:bg-blue-600">Save to watchlist</button>
+                    </form>
                 </div>
 </div>
 

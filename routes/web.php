@@ -22,5 +22,7 @@ Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
 Route::post('/find/', [MovieController::class, 'index'])->name('find');
 Route::get('/categories/', [GenreController::class, 'index'])->name('categories');
 Route::get('/watchlist/', [WatchlistController::class, 'show'])->name('watchlist')->middleware('auth');
+Route::post('/watchlist/add/{id}', [WatchlistController::class, 'addMovie'])->name('watchlist-add')->middleware('auth');
+Route::post('/watchlist/remove/{id}', [WatchlistController::class, 'removeMovie'])->name('watchlist-remove')->middleware('auth');
 
 require __DIR__.'/auth.php';

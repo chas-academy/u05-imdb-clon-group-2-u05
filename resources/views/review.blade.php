@@ -1,4 +1,4 @@
-<div class="py-4">
+<div class="py-4" id="review">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8  text-center sm:text-center md:text-left lg:text-left">
         <h1 class="text-lg font-semibold ">Review</h1>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

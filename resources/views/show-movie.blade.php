@@ -38,7 +38,9 @@
 
 </div>
 
-@include('review')
+@auth
+    @include('review')
+@endauth
 
 <div class="movie-cast border-b border-gray-800">
     <div class="container mx-auto px-4 py-16">

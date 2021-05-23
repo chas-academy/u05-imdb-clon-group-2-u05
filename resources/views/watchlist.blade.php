@@ -52,10 +52,18 @@
                 <a href="{{ route('movie', $movie->movie_id) }}/#review" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-gray-500 hover:text-gray-900">Review</a>
               </td>
 			        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-gray-500 hover:text-gray-900">Delete</a>
+                <form method="POST" action="{{ route('watchlist-remove', $movie->movie_id) }}">
+                  @csrf
+                  <button type="submit" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-gray-500 hover:text-gray-900">Delete</button>
+                </form>
               </td>
             </tr>
           @endforeach
+          @if ($movies->count() === 0) 
+          <tr>
+            <td colspan="5" class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">Your list is empty right now, let's discover some movies. 😀</td>
+          </tr>
+          @endif
           </tbody>
         </table>
       </div>

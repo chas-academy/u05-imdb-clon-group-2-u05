@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class MovieBelongsToList extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+
+    public $table = 'movie_belongs_to_list';
+
+    protected $fillable = [
+        'watchlist_id',
+        'movie_id'
+    ];
 }

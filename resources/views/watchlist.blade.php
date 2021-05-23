@@ -19,100 +19,43 @@
               <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Review</span>
               </th>
-			  <th scope="col" class="relative px-6 py-3">
+			        <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Delete</span>
               </th>
             </tr>
           </thead>
           
 		  <tbody class="bg-white divide-y divide-gray-200">
+      @foreach ($movies as $movie)
             <tr>
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                   <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="#" alt="">
+                    <img class="h-10 w-10 rounded-full" src="{{ $movie->thumbnail }}" alt="{{ $movie->name }}">
                   </div>
                   <div class="ml-4">
                     <div class="text-sm font-medium text-gray-900">
-                      Baby Driver
+                    {{ $movie->name }}
                     </div>
                   </div>
                 </div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Action, Crime, Drama</div>
+                <div class="text-sm text-gray-900">{{ $movie->genre }}</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
                 <span class="px-2 inline-flex text-xs leading-5 text-gray-900">
-                  2021-04-12
+                {{ \Carbon\Carbon::parse($movie->created_at)->format('Y-m-d') }}
                 </span>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="review" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-gray-500 hover:text-gray-900">Review</a>
+                <a href="{{ route('movie', $movie->movie_id) }}/#review" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-gray-500 hover:text-gray-900">Review</a>
               </td>
-			  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+			        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="#" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-gray-500 hover:text-gray-900">Delete</a>
               </td>
             </tr>
-
-			<tr>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="flex items-center">
-                  <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="#" alt="">
-                  </div>
-                  <div class="ml-4">
-                    <div class="text-sm font-medium text-gray-900">
-                      Baby Driver
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Action, Crime, Drama</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 text-gray-900">
-                  2021-04-12
-                </span>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-gray-500 hover:text-gray-900">Review</a>
-              </td>
-			  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-gray-500 hover:text-gray-900">Delete</a>
-              </td>
-            </tr>
-
-			<tr>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="flex items-center">
-                  <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="#" alt="">
-                  </div>
-                  <div class="ml-4">
-                    <div class="text-sm font-medium text-gray-900">
-                      Baby Driver
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Action, Crime, Drama</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 text-gray-900">
-                  2021-04-12
-                </span>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-gray-500 hover:text-gray-900">Review</a>
-              </td>
-			  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-gray-500 hover:text-gray-900">Delete</a>
-              </td>
-            </tr>
-
+          @endforeach
           </tbody>
         </table>
       </div>

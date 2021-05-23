@@ -21,6 +21,6 @@ Route::get('/title/{id}', [MovieController::class, 'show'])->name('movie');
 Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
 Route::post('/find/', [MovieController::class, 'index'])->name('find');
 Route::get('/categories/', [GenreController::class, 'index'])->name('categories');
-Route::get('/watchlist/{id}', [WatchlistController::class, 'show'])->name('watchlist')->middleware('auth');
+Route::get('/watchlist/', [WatchlistController::class, 'show'])->name('watchlist')->middleware('auth');
 
 require __DIR__.'/auth.php';

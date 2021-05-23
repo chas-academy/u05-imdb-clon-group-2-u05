@@ -25,11 +25,13 @@
                 </div>
             </div>
                 </li>
+                @auth
                 <li class="md:ml-6 mt-4 md:mt-0">
-                    <a href="watchlist">
+                    <a href="{{ route('watchlist') }}">
                         <img src="{{url('/images/Watchlist.svg')}}" title="Watchlist" alt="Image" class="w-11 h-11 hover:opacity-75 transition ease-in-out duration 150" />
                     </a>
                 </li>
+                @endauth
             </ul>
             
 

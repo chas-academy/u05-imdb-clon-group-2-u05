@@ -18,16 +18,10 @@ class WatchlistController extends Controller
      */
     public function show()
     {
-        $id = Watchlist::where('user_id', Auth::id())->get('id')[0]->id;
-        $userBelongsToList = Watchlist::where('user_id', Auth::id())->where('id', $id)->exists();
-
-        if ($userBelongsToList) {
-            $movies = DB::table('movie_belongs_to_list')->join('movies', 'movie_belongs_to_list.movie_id', '=', 'movies.id')->where('watchlist_id', $id)->select('movie_belongs_to_list.movie_id', 'movies.thumbnail', 'movies.name', 'movies.genre', 'movie_belongs_to_list.created_at')->get();
-            return view('watchlist', ['movies' => $movies]);
-        }
-        else {
-            return response(view('errors.403'), 403);
-        }
+        $listId = Watchlist::where('user_id', Auth::id())->get('id')[0]->id;
+    
+        $movies = DB::table('movie_belongs_to_list')->join('movies', 'movie_belongs_to_list.movie_id', '=', 'movies.id')->where('watchlist_id', $listId)->select('movie_belongs_to_list.movie_id', 'movies.thumbnail', 'movies.name', 'movies.genre', 'movie_belongs_to_list.created_at')->get();
+        return view('watchlist', ['movies' => $movies]);
     }
 
     /**

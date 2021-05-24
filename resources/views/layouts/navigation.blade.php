@@ -7,13 +7,13 @@
                 </a>
                 </li>
                 <li class="md:ml-16 mt-2 md:mt-0">
-                    <a href="movies" class="text-sm hover:text-gray-300">Movies</a>
+                    <a href="/" class="text-sm hover:text-gray-300">Movies</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
-                    <a href="tv-shows" class="text-sm hover:text-gray-300">TV shows</a>
+                    <a href="/" class="text-sm hover:text-gray-300">TV shows</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
-                    <a href="actors" class="text-sm hover:text-gray-300">Actors</a>
+                    <a href="/" class="text-sm hover:text-gray-300">Actors</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
                     <div class="flex flex-col md:flex-row items-center">

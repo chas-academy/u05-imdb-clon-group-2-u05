@@ -13,7 +13,7 @@
                     <a href="/" class="text-sm hover:text-gray-300">TV shows</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
-                    <a href="/" class="text-sm hover:text-gray-300">Actors</a>
+                    <a href="{{ route('categories') }}" class="text-sm hover:text-gray-300">Categories</a>
                 </li>
                 <li class="md:ml-6 mt-2 md:mt-0">
                     <div class="flex flex-col md:flex-row items-center">

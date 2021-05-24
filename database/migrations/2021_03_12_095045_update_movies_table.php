@@ -17,6 +17,8 @@ class UpdateMoviesTable extends Migration
             $table->year('year');
             $table->string('genre');
             $table->foreign('genre')->references('genre')->on('genres');
+            $table->integer('rating')->unsigned()->default(0);
+            $table->string('thumbnail')->nullable()->change();
         });
     }
 
@@ -30,6 +32,7 @@ class UpdateMoviesTable extends Migration
         Schema::table('movies', function (Blueprint $table) {
             $table->dropColumn('year');
             $table->dropColumn('genre');
+            $table->dropColumn('rating');
         });
     }
 }

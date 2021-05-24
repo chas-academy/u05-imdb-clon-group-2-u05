@@ -39,10 +39,14 @@ class WatchlistController extends Controller
     public function addMovie($id)
     {
         $listId = Watchlist::where('user_id', Auth::id())->get('id')[0]->id;
-        $movie = new MovieBelongsToList;
-        $movie->watchlist_id = $listId;
-        $movie->movie_id = $id;
-        $movie->save();
+        $movieSaved = MovieBelongsToList::where('watchlist_id', $listId)->where('movie_id', $id)->exists();
+
+        if (!$movieSaved) {
+            $movie = new MovieBelongsToList;
+            $movie->watchlist_id = $listId;
+            $movie->movie_id = $id;
+            $movie->save();
+        }
 
         $movieData = Movie::where('id', $id)->firstOrFail();
         return view('show-movie', ['movie' => $movieData]);

@@ -26,5 +26,6 @@ Route::get('/categories/', [GenreController::class, 'index'])->name('categories'
 Route::get('/watchlist/', [WatchlistController::class, 'show'])->name('watchlist')->middleware('auth');
 Route::post('/watchlist/add/{id}', [WatchlistController::class, 'addMovie'])->name('watchlist-add')->middleware('auth');
 Route::post('/watchlist/remove/{id}', [WatchlistController::class, 'removeMovie'])->name('watchlist-remove')->middleware('auth');
+Route::post('/review/add', [ReviewController::class, 'store'])->name('add-review')->middleware('auth');
 
 require __DIR__.'/auth.php';

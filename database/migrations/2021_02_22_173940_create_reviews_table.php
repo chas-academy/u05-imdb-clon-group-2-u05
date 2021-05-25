@@ -21,6 +21,7 @@ class CreateReviewsTable extends Migration
             $table->integer('rating');
             $table->foreignId('movie_id')->constrained();
             $table->foreignId('user_id')->constrained();
+            $table->boolean('approved')->default('0');
         });
     }
 

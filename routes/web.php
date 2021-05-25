@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\WatchlistController;
+use App\Http\Controllers\ReviewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,7 @@ use App\Http\Controllers\WatchlistController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/title/{id}', [MovieController::class, 'show'])->name('movie');
+Route::get('/title/{id}/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::get('/genre/{genre}', [MovieController::class, 'index'])->name('genre');
 Route::post('/find/', [MovieController::class, 'index'])->name('find');
 Route::get('/categories/', [GenreController::class, 'index'])->name('categories');

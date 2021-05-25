@@ -15,7 +15,7 @@ class ReviewController extends Controller
      */
     public function index($movieId)
     {
-        $reviews = Review::where('movie_id', $movieId)->where('approved', '1')->join('users', 'users.id', '=', 'reviews.user_id')->select('reviews.created_at', 'title', 'review_text', 'rating', 'name')->orderBy('created_at', 'DESC')->get();
+        $reviews = Review::where('movie_id', $movieId)->where('approved', '1')->join('users', 'users.id', '=', 'reviews.user_id')->select('reviews.created_at', 'title', 'review_text', 'rating', 'name', 'movie_id')->orderBy('created_at', 'DESC')->get();
 
         return view('reviews', ['reviews' => $reviews]);
     }

@@ -11,21 +11,21 @@
                         </div>
 
                         <div class="mb-8">
-                            <label>Rating</label>
+                            <label class="text-gray-600">Rating</label>
                             <input type="radio" name="rating" value="1" required>
-                            <label for="rating">1</label>
+                            <label for="rating" class="text-gray-600">1</label>
 
                             <input type="radio" name="rating" value="2" required>
-                            <label for="rating">2</label>
+                            <label for="rating" class="text-gray-600">2</label>
 
                             <input type="radio" name="rating" value="3" required>
-                            <label for="rating">3</label>
+                            <label for="rating" class="text-gray-600">3</label>
 
                             <input type="radio" name="rating" value="4" required>
-                            <label for="rating">4</label>
+                            <label for="rating" class="text-gray-600">4</label>
 
                             <input type="radio" name="rating" value="5" required>
-                            <label for="rating">5</label>
+                            <label for="rating" class="text-gray-600">5</label>
                         </div>
 
                         <div class="mb-8">

@@ -1,7 +1,3 @@
-<div class="text-center m-5">
-    <a href="{{ route('reviews', $movie->id) }}" class="p-3 bg-blue-800 text-white hover:bg-blue-600">Read user reviews</a>
-</div>
-
 <div class="py-4" id="review">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8  text-center sm:text-center md:text-left lg:text-left">
         <h1 class="text-lg font-semibold ">Review</h1>

@@ -42,6 +42,10 @@
 
 </div>
 
+<div class="text-center m-5">
+    <a href="{{ route('reviews', $movie->id) }}" class="p-3 bg-blue-800 text-white hover:bg-blue-600">Read user reviews</a>
+</div>
+
 @auth
     @include('review')
 @endauth

@@ -10,10 +10,14 @@
                 <small>{{ $review->name }}, {{ Carbon\Carbon::parse($review->created_at)->diffForHumans()}}</small>
             </div>
             @endforeach
+
+            @if ($reviews->count() === 0)
+                <p>There are no reviews for this title yet.</p>
+            @endif
         </div>
     </div>
 
     <div class="text-center m-5">
-        <a href="{{ route('movie', $review->movie_id) }}" class="p-3 bg-blue-800 text-white hover:bg-blue-600">Back to movie</a>
+        <a href="{{ route('movie', request()->route('id')) }}" class="p-3 bg-blue-800 text-white hover:bg-blue-600">Back to movie</a>
     </div>
 </x-app-layout>

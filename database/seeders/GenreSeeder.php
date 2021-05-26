@@ -14,12 +14,12 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-        $genres = ['Action', 'Adventure', 'Animation', 'Comedy', 'Drama', 'Crime', 'Thriller', 'Fantasy', 'Horror', 'Mystery', 'Romance', 'Thriller'];
+        $genres = ['Action', 'Adventure', 'Animation', 'Comedy', 'Drama', 'Crime', 'Fantasy', 'Horror', 'Mystery', 'Romance', 'Thriller'];
 
         foreach ($genres as $genre) {
             DB::table('genres')->insert([
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s"),
+                'created_at' => now(),
+                'updated_at' => now(),
                 'genre' => $genre,
                 'thumbnail' => NULL,
             ]);

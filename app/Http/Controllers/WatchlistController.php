@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Watchlist;
-use App\Models\Movie;
 use App\Models\MovieBelongsToList;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -42,8 +41,7 @@ class WatchlistController extends Controller
             $movie->save();
         }
 
-        $movieData = Movie::where('id', $id)->firstOrFail();
-        return view('show-movie', ['movie' => $movieData]);
+       return redirect()->route('movie', $id);
     }
    
     /**

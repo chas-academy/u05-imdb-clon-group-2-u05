@@ -1,7 +1,7 @@
 <x-app-layout>
 <div class="movie-info border-b border-gray-800">
 <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
-                    <img src="{{ $movie->thumbnail }}" alt="Image" class="w-64 md:w-96 hover:opacity-75 transition ease-in-out duration 150" style="width: 24rem">
+                    <img src="{{ $movie->thumbnail }}" alt="Image" class="hover:opacity-75 transition ease-in-out duration 150">
                 <div class="md:ml-24">
                     <h2 class="text-4xl font-semibold text-yellow-500">{{ $movie->name }}</h2>
                     <div class="flex flex-wrap items-center text-gray-400 text-sm mt-1">

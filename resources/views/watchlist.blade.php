@@ -61,7 +61,7 @@
           @endforeach
           @if ($movies->count() === 0) 
           <tr>
-            <td colspan="5" class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">Your list is empty right now, let's discover some movies. 😀</td>
+            <td colspan="5" class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium text-gray-900">Your list is empty right now, let's discover some movies. 😀</td>
           </tr>
           @endif
           </tbody>

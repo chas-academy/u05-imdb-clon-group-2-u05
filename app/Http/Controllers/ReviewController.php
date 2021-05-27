@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class ReviewController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Get reviews for a movie title
      *
+     * @param  int $movieId
      * @return \Illuminate\Http\Response
      */
     public function index($movieId)
@@ -21,9 +22,9 @@ class ReviewController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a review
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)

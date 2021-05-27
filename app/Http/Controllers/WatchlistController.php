@@ -57,6 +57,6 @@ class WatchlistController extends Controller
         $listId = Watchlist::where('user_id', Auth::id())->get('id')[0]->id;
         MovieBelongsToList::where('movie_id', $id)->where('watchlist_id', $listId)->delete();
 
-        return $this->show();
+        return $this->show();       //Calls this class 'show' method (refresh page without js)
     }
 }

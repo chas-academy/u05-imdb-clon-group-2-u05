@@ -9,7 +9,7 @@ use App\Models\Movie;
 class ReviewSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds. Adds dummy reviews.
      *
      * @return void
      */

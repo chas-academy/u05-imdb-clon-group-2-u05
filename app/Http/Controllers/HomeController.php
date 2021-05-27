@@ -8,6 +8,11 @@ use App\Models\Movie;
 
 class HomeController extends Controller
 {
+    /**
+     * Fetch featured, popular and top movies for home page
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index() {
         $featuredMovies = DB::table('featured_movies')
         ->join('movies', 'featured_movies.movie_id', '=', 'movies.id')->limit(5)->get();

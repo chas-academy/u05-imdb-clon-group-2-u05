@@ -8,7 +8,7 @@ use App\Models\Movie;
 class MovieController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * List movie titles
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -59,7 +59,7 @@ class MovieController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Show a single movie title
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

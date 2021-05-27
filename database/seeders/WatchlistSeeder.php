@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class WatchlistSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds. Adds empty watchlists for all users.
      *
      * @return void
      */
@@ -17,7 +17,7 @@ class WatchlistSeeder extends Seeder
     {
         $users = User::all();
 
-        foreach ($users as $user) {                 //Add empty watchlists for all users
+        foreach ($users as $user) {
             DB::table('watchlists')->insert([
                 'created_at' => now(),
                 'updated_at' => now(),

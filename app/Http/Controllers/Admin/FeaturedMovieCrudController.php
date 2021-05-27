@@ -42,7 +42,7 @@ class FeaturedMovieCrudController extends CrudController
     {
         $this->crud->setTitle('some string', 'create');
 
-        CRUD::addColumn(['name' => 'id', 'type' => 'string', 'label' => 'Movie', 'wrapper' => [
+        CRUD::addColumn(['name' => 'id', 'type' => 'string', 'label' => 'Movie', 'wrapper' => [     //Fetch movie title from movie id
            function ($crud, $column, $entry, $related_key) { 
                echo $this->getMovieTitle($entry->movie_id) . ' - ';
             }

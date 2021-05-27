@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class GenreController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Get all genres
      *
      * @return \Illuminate\Http\Response
      */

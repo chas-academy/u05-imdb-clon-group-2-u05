@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds. Adds dummy users.
      *
      * @return void
      */

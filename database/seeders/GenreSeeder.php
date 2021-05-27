@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class GenreSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds. Adds default genres.
      *
      * @return void
      */

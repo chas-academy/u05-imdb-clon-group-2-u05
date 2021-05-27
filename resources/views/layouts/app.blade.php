@@ -22,12 +22,14 @@
         <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script>
+        if (window.location.pathname === '/') {
             document.addEventListener( 'DOMContentLoaded', function () {
 		        new Splide( '.splide', {
                     type: 'loop',
                     perPage: 3
                 } ).mount();
 	        });
+        }
         </script>
     </head>
     <body class="font-sans antialiased text-white bg-gray-900">
@@ -48,11 +50,15 @@
                 {{ $slot }}
             </main>
             <footer>
-            @include('layouts.footer')
+                @include('layouts.footer')
             </footer>
         </div>
+        @auth
         <script>
-        CKEDITOR.replace( 'content-review' );
+        if (window.location.pathname.includes('title') && !window.location.pathname.endsWith('reviews')) {
+            CKEDITOR.replace( 'content-review' );
+        }
         </script>
+        @endauth
     </body>
 </html>

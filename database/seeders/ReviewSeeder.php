@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Movie;
 
 class ReviewSeeder extends Seeder
 {
@@ -62,7 +63,7 @@ class ReviewSeeder extends Seeder
                 'title' => substr($reviews[$item]['text'], 0, 80) . '...',
                 'review_text' => $reviews[$item]['text'],
                 'rating' => $reviews[$item]['rating'],
-                'movie_id' => rand(1, 9),
+                'movie_id' => rand(1, Movie::all()->count()),
                 'user_id' => rand(1, 50),
                 'approved' => 1,
             ]);

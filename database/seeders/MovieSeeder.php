@@ -67,7 +67,7 @@ class MovieSeeder extends Seeder
             array(
                 'name' => 'Mare of Easttown',
                 'description' => 'A detective in a small Pennsylvania town investigates a local murder while trying to keep her life from falling apart.',
-                'genre' => 'Drama',
+                'genre' => 'Crime',
                 'year' => 2021,
                 'thumbnail' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/78aK4Msbr22A5PGa6PZV0pAvdwf.jpg',
             ),
@@ -77,6 +77,34 @@ class MovieSeeder extends Seeder
                 'genre' => 'Animation',
                 'year' => 2021,
                 'thumbnail' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg',
+            ),
+            array(
+                'name' => 'Game of Thrones',
+                'description' => 'Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night\'s Watch, is all that stands between the realms of men and icy horrors beyond.',
+                'genre' => 'Fantasy',
+                'year' => 2011,
+                'thumbnail' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg',
+            ),
+            array(
+                'name' => 'Terminator: Dark Fate',
+                'description' => 'Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet.',
+                'genre' => 'Action',
+                'year' => 2019,
+                'thumbnail' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vqzNJRH4YyquRiWxCCOH0aXggHI.jpg',
+            ),
+            array(
+                'name' => 'Fear the Walking Dead',
+                'description' => 'What did the world look like as it was transforming into the horrifying apocalypse depicted in "The Walking Dead"? This spin-off set in Los Angeles, following new characters as they face the beginning of the end of the world, will answer that question.',
+                'genre' => 'Adventure',
+                'year' => 2015,
+                'thumbnail' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4UjiPdFKJGJYdxwRs2Rzg7EmWqr.jpg',
+            ),
+            array(
+                'name' => 'Ghost Lab',
+                'description' => 'After witnessing a haunting in their hospital, two doctors become dangerously obsessed with obtaining scientific proof that ghosts exist.',
+                'genre' => 'Horror',
+                'year' => 2021,
+                'thumbnail' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vdMsMYfkHJ6mLht5QCg7Hl8hnEp.jpg',
             ),
         );
 
